@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import useLocalStorage from '../../hooks/useLocalStorage';
+import { useLocaleStorage } from '../../hooks/useLocaleStorage';
 import s from './ContactForm.module.css';
 
 export default function ContactForm({ onSubmit }) {
-  const [name, setName] = useLocalStorage('name', '');
-  const [number, setNumber] = useLocalStorage('number', '');
+  const [name, setName] = useLocaleStorage('name', '');
+  const [number, setNumber] = useLocaleStorage('number', '');
 
   const hundleChange = e => {
     const { name, value } = e.currentTarget;

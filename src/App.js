@@ -6,13 +6,13 @@ import Container from './components/Container';
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Filter from './components/Filter';
-import useLocalStorage from '../src/hooks/useLocalStorage';
+import { useLocaleStorage } from '../src/hooks/useLocaleStorage';
 
 const Title = ['Title'];
 
 export default function App() {
   const [filter, setFilter] = useState('');
-  const [contacts, setContacts] = useLocalStorage('contacts', [
+  const [contacts, setContacts] = useLocaleStorage('contacts', [
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
     { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
     { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
